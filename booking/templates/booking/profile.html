@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Profile</h1>
+<h2>My Bookings</h2>
+<h3>Active Bookings</h3>
+<ul>
+    {% for booking in active_bookings %}
+        <li>
+            Date: {{ booking.date }}, Time Slot: {{ booking.time_slot }}
+            <a href="{% url 'edit_booking' booking.id %}">Edit</a>
+        </li>
+    {% empty %}
+        <li>No active bookings found.</li>
+    {% endfor %}
+</ul>
+
+<h3>Cancelled Bookings</h3>
+<ul>
+    {% for booking in cancelled_bookings %}
+        <li style="color: grey;">
+            Date: {{ booking.date }}, Time Slot: {{ booking.time_slot }} (Cancelled)
+            <form method="post" style="display:inline;">
+                {% csrf_token %}
+                <input type="hidden" name="booking_id" value="{{ booking.id }}">
+                <button type="submit" style="background-color: red; color: white;">Delete</button>
+            </form>
+        </li>
+    {% empty %}
+        <li>No cancelled bookings found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
