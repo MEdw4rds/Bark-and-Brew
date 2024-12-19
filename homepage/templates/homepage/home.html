@@ -1,0 +1,11 @@
+<!-- homepage/templates/homepage/home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="homepage-container">
+    <h1>Welcome to Bark & Brew!</h1>
+    <p>Where tails wag and coffee is always fresh.</p>
+    <a href="{% url 'account_signup' %}" class="button">Sign Up</a>
+    <a href="{% url 'book_time_slot' %}" class="button">Book Now</a>
+</div>
+{% endblock %}
