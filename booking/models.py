@@ -21,15 +21,16 @@ class Booking(models.Model):
     class Meta:
         unique_together = ['date', 'time_slot']
 
-
-def clean(self):
-    # Ensure date is not None
-    if self.date is None:
-        raise ValidationError('Date cannot be empty.')
-
-    # Ensure bookings are not made on Sundays
-    if self.date.weekday() == 6:  # 6 corresponds to Sunday
-        raise ValidationError('Bookings cannot be made on Sundays.')
+    def clean(self):
+        super().clean()
+        if self.date < datetime.date.today():
+            raise ValidationError('You cannot book a past date.')
+        if self.date.weekday() == 6:  # 6 corresponds to Sunday
+            raise ValidationError('Bookings cannot be made on Sundays.')
+        disabled_time_slots = DisabledTimeSlot.objects.filter(
+            date=self.date, time_slot=self.time_slot)
+        if disabled_time_slots.exists():
+            raise ValidationError('The selected time slot is disabled.')
 
 
 class DisabledTimeSlot(models.Model):
