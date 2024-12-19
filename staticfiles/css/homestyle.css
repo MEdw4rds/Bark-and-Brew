@@ -1,0 +1,20 @@
+/* homepage/static/homepage/homestyles.css */
+.homepage-container {
+    text-align: center;
+    padding: 50px;
+}
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.button:hover {
+    background-color: #f57c00;
+}
+body{
+    background: url(static/images/1000.png);
+}
