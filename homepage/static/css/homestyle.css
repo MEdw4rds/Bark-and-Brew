@@ -1,9 +1,9 @@
-/* homepage/static/homepage/homestyles.css */
+/* homepage/static/css/homestyles.css */
 .homepage-container {
     text-align: center;
     padding: 50px;
 }
-.button {
+.homepage-button {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
@@ -12,6 +12,6 @@
     text-decoration: none;
     border-radius: 5px;
 }
-.button:hover {
+.homepage-button:hover {
     background-color: #f57c00;
 }
