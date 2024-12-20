@@ -2,6 +2,8 @@ from datetime import datetime
 
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.core.exceptions import ValidationError
 
 from .models import Booking, DisabledTimeSlot
 from .forms import BookingForm, EditBookingForm
@@ -39,8 +41,14 @@ def book_time_slot(request):
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
-            booking.save()
-            return redirect('booking_success')
+            try:
+                booking.save()
+                return redirect('booking_success')
+            except ValidationError as e:
+                messages.add_message(request, messages.ERROR, e.message)
+        else:
+            for error in form.errors.values():
+                messages.add_message(request, messages.ERROR, error)
     else:  # This is for the GET request
         form = BookingForm()
 
@@ -72,22 +80,38 @@ def edit_booking(request, booking_id):
     if request.method == 'POST':
         if 'cancel' in request.POST:
             booking.is_canceled = True
-            booking.save()
-            return redirect('profile')
+            try:
+                booking.save()
+                messages.add_message(request, messages.SUCCESS,
+                                     'Booking cancelled successfully.')
+                return redirect('profile')
+            except ValidationError as e:
+                messages.add_message(request, messages.ERROR, e.message)
         elif 'delete' in request.POST:
             booking.delete()
+            messages.add_message(request, messages.SUCCESS,
+                                 'Booking deleted successfully.')
             return redirect('profile')
         else:
             form = EditBookingForm(request.POST, instance=booking)
             if form.is_valid():
-                form.save()
-                return redirect('profile')
+                try:
+                    form.save()
+                    messages.add_message(request, messages.SUCCESS,
+                                         'Booking updated successfully.')
+                    return redirect('profile')
+                except ValidationError as e:
+                    messages.add_message(request, messages.ERROR, e.message)
+            else:
+                for error in form.errors.values():
+                    messages.add_message(request, messages.ERROR, error)
     else:
         form = EditBookingForm(instance=booking)
+
     return render(request, 'booking/edit_booking.html', {
-        'form': form,
-        'booking': booking
-    })
+            'form': form,
+            'booking': booking
+        })
 
 
 @login_required

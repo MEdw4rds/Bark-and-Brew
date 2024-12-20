@@ -30,7 +30,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = ['8000-medw4rds-djangoproject-yt3n3b2hxu5.ws.codeinstitute-ide.net',
                  '.herokuapp.com']
@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django_summernote',
+    'cloudinary',
     'booking',
     'homepage',
 ]
@@ -58,13 +60,13 @@ LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 ]
 
@@ -138,7 +140,7 @@ USE_I18N = True
 USE_TZ = True
 
 MESSAGE_TAGS = {
-    messages.SUCCESS: 'alert-sucess',
+    messages.SUCCESS: 'alert-success',
     messages.ERROR: 'alert-danger',
 }
 
