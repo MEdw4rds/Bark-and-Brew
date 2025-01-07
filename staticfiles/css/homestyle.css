@@ -1,17 +1,78 @@
 /* homepage/static/css/homestyles.css */
 .homepage-container {
+    background-image: url(/static/images/pexels-cottonbro-2925324.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
     text-align: center;
     padding: 50px;
+    height: 700px;
 }
+
+.home-heading {
+    background-color: rgba(18, 17, 17, 0.648);
+    color: #fff;
+    width: 100%;
+    margin: auto;
+}
+
+.heading {
+    margin-top: 20px;
+}
+
 .homepage-button {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
-    background-color: #ff9800;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     border-radius: 5px;
 }
+
 .homepage-button:hover {
-    background-color: #f57c00;
+    background-color: #ae7121;
+    color: #fff;
+}
+
+
+
+/* Info Cards */
+.card-img-top{
+    border-radius: 50%;
+}
+
+.card-col{
+    max-width: 300px;
+    min-width: 250px;
+}
+
+.card{
+    margin: auto;
+    max-width: 250px;
+    border: none;
+    background-color:#ededed;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+    .home-heading {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .home-heading {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .home-heading {
+        width: 35%;
+    }
 }
