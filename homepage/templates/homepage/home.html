@@ -4,13 +4,87 @@
 
 {% block content %}
 
-    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
+<link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
 
-
-<div class="homepage-container">
-    <h1>Welcome to Bark & Brew!</h1>
-    <p>Where tails wag and coffee is always fresh.</p>
-    <a href="{% url 'account_signup' %}" class="homepage-button">Sign Up</a>
-    <a href="{% url 'book_time_slot' %}" class="homepage-button">Book Now</a>
+<div class="container-fluid">
+    <div class="col">
+        <div class="row homepage-container">
+            <div>
+                <div class="heading home-heading">
+                    <h1>Welcome to Bark & Brew!</h1>
+                    <p>Where tails wag and coffee is always fresh.</p>
+                </div>
+                <a href="{% url 'account_signup' %}" class="homepage-button btn--orange">Sign Up</a>
+                <a href="{% url 'book_time_slot' %}" class="homepage-button btn--orange">Book Now</a>
+            </div>
+        </div>
+        <div class="heading text-center">
+            <h2>Meet Our Servers</h2>
+        </div>
+        <hr>
+        <div class="row row-cols-1 row-cols-md-5 g-4 d-flex justify-content-center">
+            <div class="col card-col">
+                <div class="card text-center h-100">
+                    <img src="{% static '/images/Jemma.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Jemma</h5>
+                        <p class="card-text"><span class="bold">Hello!</span> I am Jemma. I am a rescue. I like food,
+                            walking, tenis balls, scritches and <span class="bold">FOOD.</span>
+                            <br>
+                            Dislikes going to the vet and those pesky squirrels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-col">
+                <div class="card text-center h-100">
+                    <img src="{% static '/images/Jemma.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Jemma</h5>
+                        <p class="card-text"><span class="bold">Hello!</span> I am Jemma. I am a rescue. I like food,
+                            walking, tenis balls, scritches and <span class="bold">FOOD.</span>
+                            <br>
+                            Dislikes going to the vet and those pesky squirrels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-col">
+                <div class="card text-center h-100">
+                    <img src="{% static '/images/Jemma.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Jemma</h5>
+                        <p class="card-text"><span class="bold">Hello!</span> I am Jemma. I am a rescue. I like food,
+                            walking, tenis balls, scritches and <span class="bold">FOOD.</span>
+                            <br>
+                            Dislikes going to the vet and those pesky squirrels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-col">
+                <div class="card text-center h-100">
+                    <img src="{% static '/images/Jemma.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Jemma</h5>
+                        <p class="card-text"><span class="bold">Hello!</span> I am Jemma. I am a rescue. I like food,
+                            walking, tenis balls, scritches and <span class="bold">FOOD.</span>
+                            <br>
+                            Dislikes going to the vet and those pesky squirrels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-col">
+                <div class="card text-center h-100">
+                    <img src="{% static '/images/Jemma.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Jemma</h5>
+                        <p class="card-text"><span class="bold">Hello!</span> I am Jemma. I am a rescue. I like food,
+                            walking, tenis balls, scritches and <span class="bold">FOOD.</span>
+                            <br>
+                            Dislikes going to the vet and those pesky squirrels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}

@@ -34,45 +34,68 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light color--brown">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
-                        class="thin">|star</span></span></a>
+            <a class="navbar-brand text-white" href="{% url 'home' %}"><span class="brand">Bark <span
+            class="thin">& Brew</span></span></a>
+            {% if user.is_authenticated %}
+            <span class="text-end text-white toggle-on">
+                You are Logged in as {{ user.username }}
+            </span>
+            {% else %}
+            <span class="text-end text-white m-2 toggle-on">
+                You are not Logged in.
+            </span>
+            {% endif %}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="collapse navbar-collapse text-white" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page"
-                            href="{% url 'book_time_slot' %}">Home</a>
+                        <a class="nav-link text-white" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                        <a class="nav-link text-white" aria-current="page"
+                            href="{% url 'book_time_slot' %}">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page"
+                            href="{% url 'profile' %}">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if request.path == logout_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                    <li class="nav-item text-white">
+                        <a class="nav-link text-white {% if request.path == signup_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == login_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                     {% if user.is_authenticated and user.is_superuser %} 
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == login_url %}active{% endif %}" aria-current="page"
                             href="{% url 'admin:index' %}">admin</a>
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    adventures of a software developer
+                {% if user.is_authenticated %}
+                <span class="text-end text-white m-2 toggle-off">
+                    You are Logged in as {{ user.username }}
                 </span>
+                {% else %}
+                <span class="text-end text-white m-2 toggle-off">
+                    You are not Logged in.
+                </span>
+                {% endif %}
             </div>
         </div>
     </nav>
@@ -93,10 +116,6 @@
 
     <main class="flex-shrink-0 main-bg">
 
-
-        <p class="text-end text-muted m-3">
-            You are Logged in as <a href="{% url 'profile' %}">{{ user.username }}</a>
-        </p>
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -104,7 +123,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
+    <footer class="footer mt-auto py-3 color--brown">
         <p class="m-0 text-center text-white">
 
         </p>

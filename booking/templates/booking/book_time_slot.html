@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Book a Time Slot</h1>
-<form method="post" action="{% url 'book_time_slot' %}">
+<form method="post" class="forms" action="{% url 'book_time_slot' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Book Now</button>
