@@ -11,7 +11,7 @@
 <html class="h-100" lang="en">
 
 <head>
-    <title>CodeStar Blog</title>
+    <title>Bark & Brew</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google Fonts CSS -->
@@ -43,7 +43,7 @@
                 You are Logged in as {{ user.username }}
             </span>
             {% else %}
-            <span class="text-end text-white m-2 toggle-on">
+            <span class="text-end text-white toggle-on">
                 You are not Logged in.
             </span>
             {% endif %}
@@ -83,16 +83,16 @@
                     {% if user.is_authenticated and user.is_superuser %} 
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'admin:index' %}">admin</a>
+                            href="{% url 'admin:index' %}" target="_blank">admin</a>
                     </li>
                     {% endif %}
                 </ul>
                 {% if user.is_authenticated %}
-                <span class="text-end text-white m-2 toggle-off">
+                <span class="text-end text-white toggle-off">
                     You are Logged in as {{ user.username }}
                 </span>
                 {% else %}
-                <span class="text-end text-white m-2 toggle-off">
+                <span class="text-end text-white toggle-off">
                     You are not Logged in.
                 </span>
                 {% endif %}

@@ -1,19 +1,19 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container auth-container">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign Up" %}</h3>
+            <h3 class="">{% trans "Sign Up" %}</h3>
 
             <p>{% blocktrans %}
-                Welcome back to the code|star blog.
+                Welcome back to Bark & Brew. To book a timeslot, please sign up.
                 Do you already have an account? Then please
-                <a class="link" href="{{ login_url }}">sign in</a>
+                <a class="btn btn--orange" href="{{ login_url }}">Login</a>
                 instead.
                 {% endblocktrans %}</p>
         </div>
