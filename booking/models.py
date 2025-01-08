@@ -5,6 +5,9 @@ import datetime
 
 
 class Booking(models.Model):
+    """
+    Stores a single booking entry related to :model:`auth.User`.
+    """
     TIMESLOTS = [
         (datetime.time(hour=8), '08:00'),
         (datetime.time(hour=10), '10:00'),
@@ -34,6 +37,10 @@ class Booking(models.Model):
 
 
 class DisabledTimeSlot(models.Model):
+    """
+    Stores a single disabled timeslot entry only
+    availible through the admin panel.
+    """
     date = models.DateField()
     time_slot = models.TimeField(choices=Booking.TIMESLOTS)
     reason = models.CharField(max_length=255, blank=True, null=True)
