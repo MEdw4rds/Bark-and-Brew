@@ -29,16 +29,26 @@ I then used coolors and just brightened up the colors and generated an orange to
 
 **Fonts:** I chose the Montserrat and Roboto fonts because they were simple and clean looking to not distract the user away from the content on the site.
 
-**Images:** All Images were taken from [Pexels.com](https://www.pexels.com/)
+**Images:** Most Images were taken from [Pexels.com](https://www.pexels.com/)
+            Thank you, Jemma, Teddy, Tyson and Botila for staring as the waiters & waitresses
+
+### Agile Methodology
+I used the Projects tool within GitHub to manage the different processes needed for this project to be completed. At the beginning, a Project titled "Bark & Brew Project Board" was created on GitHub and linked to the Bark & Brew repository. I did change the name of the repository as originally it was titled django-project. The project board can be found [here]()
 
 ### User Stories
-Write your user stories in this section
+
+[#1 User Story: Users Can Create an Account](https://github.com/MEdw4rds/django-blog/issues/13)
+[#2 User Story: Users Can book a timeslot to visit](https://github.com/MEdw4rds/django-blog/issues/11)
+[#3 User Story: Users Can manage their bookings ](https://github.com/MEdw4rds/django-blog/issues/20)
+[#4 User Story: Users can't book a timeslot for a past date](https://github.com/MEdw4rds/Bark-and-Brew/issues/1)
+[#5 User Story: Admin can manage and disable timeslots if required](https://github.com/MEdw4rds/django-blog/issues/12)
+[#6 User Story: Welcoming and easy to navigate homepage](https://github.com/MEdw4rds/Bark-and-Brew/issues/2)
+[#7 User Story: A simple booking form for users to fill out](https://github.com/MEdw4rds/Bark-and-Brew/issues/3)
+
 ### Wireframes
 Attach wireframes in this section
-### Agile Methodology
-Explain your agile approach to your project and insert screenshoots of your Kanban board (itterations, user stories, tasks,acceptance criteria, labels, story points...)
 ### DataBase Diagram
-Image of the database diagram for your project, you can name your database models as well and how they are connected
+
 
 ## Features:
 Explain your features on the website,(navigation, pages, links, forms, input fields, CRUD....)
