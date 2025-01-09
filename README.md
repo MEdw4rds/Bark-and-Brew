@@ -1,21 +1,12 @@
 ## Table Of Contents:
-1. [Design & Planning](#design-&-planning)
+1. [Design & Planning](#design)
     * [User Stories](#user-stories)
     * [Wireframes](#wireframes)
     * [Agile Methodology](#agile-methodology)
-    * [Typography](#typography)
     * [Colour Scheme](#colour-scheme)
     * [Database Diagram](#database-diagram)
     
 2. [Features](#features)
-    * [Navigation](#Navigation)
-    * [Footer](#Footer)
-    * [Home page](#Home-page)
-    * [add your pages](#)
-    * [CRUD](#CRUD)
-    * [Login page](#Profile-page)
-    * [Authentication & Authorisation](#Authentication-Authorisation )
-
 3. [Technologies Used](#technologies-used)
 4. [Libraries](#libraries-used)
 5. [Testing](#testing)
@@ -23,7 +14,22 @@
 7. [Deployment](#deployment)
 8. [Credits](#credits)
 
-## Design & Planning:
+## Design
+
+Bark & Brew was designed with dog lovers and coffee enjoyers offering a welcoming booking webpage.
+The design remains clean and minimal, ensuring that users can easily focus on the content and navigate the site without distractions.
+
+### Colour Scheme
+**Colors:** Originally I used a site to get colors from the main background picture.  
+![](READMEfiles/Canvas.png)
+
+I then used coolors and just brightened up the colors and generated an orange to use as a stand out color.  
+![](READMEfiles/Coolors.png)
+
+
+**Fonts:** I chose the Montserrat and Roboto fonts because they were simple and clean looking to not distract the user away from the content on the site.
+
+**Images:** All Images were taken from [Pexels.com](https://www.pexels.com/)
 
 ### User Stories
 Write your user stories in this section
@@ -31,10 +37,6 @@ Write your user stories in this section
 Attach wireframes in this section
 ### Agile Methodology
 Explain your agile approach to your project and insert screenshoots of your Kanban board (itterations, user stories, tasks,acceptance criteria, labels, story points...)
-### Typography
-Explain font you've used for your project
-### Colour Scheme
-Screenshoot of the colour scheme for your project
 ### DataBase Diagram
 Image of the database diagram for your project, you can name your database models as well and how they are connected
 
