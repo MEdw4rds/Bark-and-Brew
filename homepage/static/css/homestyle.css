@@ -1,6 +1,6 @@
 /* homepage/static/css/homestyles.css */
 .homepage-container {
-    background-image: url(/static/images/pexels-cottonbro-2925324.jpg);
+    background-image: url(/static/images/pexels-cottonbro-2925324.webp);
     background-size: cover;
     background-position: center;
     flex-grow: 1;
@@ -32,6 +32,8 @@
 }
 
 .card-img-top{
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
 }
 
