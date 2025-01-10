@@ -48,7 +48,7 @@ I used the Projects tool within GitHub to manage the different processes needed 
 ### Wireframes
 Attach wireframes in this section
 ### DataBase Diagram
-
+![](READMEfiles/ERD.png)
 
 ## Features:
 Explain your features on the website,(navigation, pages, links, forms, input fields, CRUD....)
@@ -84,7 +84,7 @@ Test all your features, you can use the same approach
 attach screenshot
 
 ## Bugs
-List of bugs and how did you fix them
+Bookings being made on the same time even while being added to unique, fixed with the help of Copilot.  
 
 ## Deployment
 This website is deployed to Heroku from a GitHub repository, the following steps were taken:
@@ -115,3 +115,8 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 - Please note that when deploying manually you will have to deploy after each change you make to your repository.
 ## Credits
 List of used resources for your website (text, images, snippets of code, projects....)
+I Think Therefor I blog for the navbar/footer
+Bootstrap card/ classes
+
+### AI uses:
+I used copilot for a small amount of content just for a dog profile as well as helping with the booking view, getting the success or error messages to show up for the user and the clean part of the booking model to stop bookings on certain days.
