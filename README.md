@@ -1,3 +1,6 @@
+## Bark & Brew Booking site
+![](READMEfiles/Responsive.png)
+
 ## Table Of Contents:
 1. [Design & Planning](#design)
     * [User Stories](#user-stories)
@@ -77,17 +80,27 @@ However I believe that it the same issue would persist for all pages as most the
 <img src="READMEfiles/chrome.png">
 </details>
 <details><summary>Edge booking page</summary>
-<img src="READMEfiles/booking_page_on_edge.png">
+<img src="READMEfiles/booking page on edge.png">
 </details>
-
-### Responsiveness
-![](READMEfiles/Responsive.png)
 
 ### Code Validation
-<details><summary>Chrome homepage</summary>
-<img src="READMEfiles/chrome.png">
+
+**HTML**
+<details><summary>Homepage</summary>
+<img src="READMEfiles/Homepage.png">
 </details>
 
+<details><summary>Booking Page</summary>
+<img src="READMEfiles/booking.png">
+</details>
+
+<details><summary>Homepage</summary>
+<img src="READMEfiles/Homepage.png">
+</details>
+
+<details><summary>Homepage</summary>
+<img src="READMEfiles/Homepage.png">
+</details>
 
 ### Manual Testing user stories
 Test all your user stories, you an create table 
@@ -103,8 +116,7 @@ Test all your features, you can use the same approach
 attach screenshot
 
 ## Bugs
-Bookings being made on the same time even while being added to unique, fixed with the help of Copilot.
-High image resolution leading to low LCP(Largest Contentful Paint) times. 
+Bookings being made on the same time even while being added to unique, fixed with the help of Copilot. 
 
 ## Deployment
 This website is deployed to Heroku from a GitHub repository, the following steps were taken:
