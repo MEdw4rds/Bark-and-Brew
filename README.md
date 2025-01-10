@@ -88,7 +88,7 @@ Explain your features on the website,(navigation, pages, links, forms, input fie
 ## Technologies Used
 
 ## Testing
-Important part of your README!!!
+
 ### Google's Lighthouse Performance
 Lighthouse is green other than performance the main culprit being the LCP.
 I would show other pages however as all other pages require logins to access and will redirect to the login page lighthouse is getting redirected everytime.
@@ -162,31 +162,41 @@ Test all your features, you can use the same approach
 | Feature | Action | Status | 
 |:-------:|:--------| :--------|
 | Login | Input name and password | &check; |
+| Signup | Input name and password and password again | &check; |
 | Create Booking | Sign in and pick a free date and time | &check; |
 | Cannot create duplicate booking | Sign in and pick the same date and time  | &check; |
 | Cannot create bookings on sunday | Sign in and pick a sunday date at anytime | &check; |
+| Cannot book a past date | Sign in and pick a date and time and be shown a message stating that it isn't possible to book a past date | &check; |
 | Edit Booking | Sign in go to bookings page and see created bookings, click edit, edit however required and submit | &check; |
 | Cancel Booking | Sign in go to bookings page and see created bookings, click edit, click cancel booking | &check; |
 | Delete Booking | Sign in go to bookings page and see created bookings, look under Cancelled Bookings and click delete on the desired booking to delete | &check; |
+| Admin panel link in navbar | When logged in as a superuser a new link appears on the navbar that will open the admin panel in a new tab | &check; |
 
-<details><summary>Login</summary>
+<details><summary>Login Screenshot</summary>
 <img src="READMEfiles/login form.png">
 </details>
-<details><summary>Book</summary>
+<details><summary>Book Screenshot</summary>
 <img src="READMEfiles/book.png">
 </details>
-<details><summary>No Duplicate</summary>
+<details><summary>No Duplicate Screenshot</summary>
 <img src="READMEfiles/no duplicates.png">
 </details>
-<details><summary>No bookings on Sunday</summary>
+<details><summary>No bookings on Sunday Screenshot</summary>
 <img src="READMEfiles/no sunday.png">
 </details>
-<details><summary>Edit bookings & Cancel booking</summary>
+<details><summary>Cannot book a past date Screenshot</summary>
+<img src="READMEfiles/no past date.png">
+</details>
+<details><summary>Edit bookings & Cancel booking Screenshot</summary>
 <img src="READMEfiles/crud.png">
 <img src="READMEfiles/edit booking form.png">
 </details>
-<details><summary>Delete booking</summary>
+<details><summary>Delete booking Screenshot</summary>
 <img src="READMEfiles/crud.png">
+</details>
+<details><summary>Admin panel link in navbar for admins only</summary>
+<img src="READMEfiles/admin nav.png">
+<img src="READMEfiles/admin panel.png">
 </details>
 
 
