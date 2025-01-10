@@ -100,7 +100,10 @@ input {
 
 
 /* Footer */
-
+.social-icon{
+    text-decoration: none;
+    color: #fff;
+}
 
 
 /* Login page templates/account/login.html*/
