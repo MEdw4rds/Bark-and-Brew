@@ -46,7 +46,11 @@ I used the Projects tool within GitHub to manage the different processes needed 
 [#7 User Story: A simple booking form for users to fill out](https://github.com/MEdw4rds/Bark-and-Brew/issues/3)
 
 ### Wireframes
-Attach wireframes in this section
+I didn't do alot of wireframes but I knew I wanted to keep it simplistic.
+![](READMEfiles/wireframe_homepage.png)
+![](READMEfiles/wireframe_booking.png)
+![](READMEfiles/wireframe_login.png)
+
 ### DataBase Diagram
 ![](READMEfiles/ERD.png)
 
@@ -63,13 +67,28 @@ List of technologies used for your project
 ## Testing
 Important part of your README!!!
 ### Google's Lighthouse Performance
-Screenshots of certain pages and scores (mobile and desktop)
+Lighthouse is green other than performance the main culprit being the size of the images on load.
+I would show other pages however as all other pages require logins to access and will redirect to the login page lighthouse is getting redirected everytime.
+However I believe that it the same issue would persist for all pages as most the images are very high resolution.
+![](READMEfiles/lighthouse.png)
+
 ### Browser Compatibility
-Check compatability with different browsers
+<details><summary>Chrome homepage</summary>
+<img src="READMEfiles/chrome.png">
+</details>
+<details><summary>Edge booking page</summary>
+<img src="READMEfiles/booking_page_on_edge.png">
+</details>
+
 ### Responsiveness
-Screenshots of the responsivness, pick few devices
+![](READMEfiles/Responsive.png)
+
 ### Code Validation
-Validate your code HTML, CSS, JS & Python (all pages/files need to be validated!!!), display screenshots
+<details><summary>Chrome homepage</summary>
+<img src="READMEfiles/chrome.png">
+</details>
+
+
 ### Manual Testing user stories
 Test all your user stories, you an create table 
 User Story |  Test | Pass
@@ -84,7 +103,8 @@ Test all your features, you can use the same approach
 attach screenshot
 
 ## Bugs
-Bookings being made on the same time even while being added to unique, fixed with the help of Copilot.  
+Bookings being made on the same time even while being added to unique, fixed with the help of Copilot.
+High image resolution leading to low LCP(Largest Contentful Paint) times. 
 
 ## Deployment
 This website is deployed to Heroku from a GitHub repository, the following steps were taken:
