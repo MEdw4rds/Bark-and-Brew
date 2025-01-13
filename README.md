@@ -11,12 +11,10 @@
     * [Database Diagram](#database-diagram)
     
 2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Libraries](#libraries-used)
-5. [Testing](#testing)
-6. [Bugs](#bugs)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
+3. [Testing](#testing)
+4. [Bugs](#bugs)
+5. [Deployment](#deployment)
+6. [Credits](#credits)
 
 ## Design
 
@@ -72,8 +70,6 @@ Explain your features on the website,(navigation, pages, links, forms, input fie
 <img src="READMEfiles/small open navbar.png">
 </details>
 
-### Footer
-
 ### Home-page
 ![](READMEfiles/chrome.png)
 
@@ -85,7 +81,8 @@ Explain your features on the website,(navigation, pages, links, forms, input fie
 <img src="READMEfiles/bookings page.png">
 
 ### Authentication-Authorisation 
-## Technologies Used
+
+Authentication is handled by allauth.
 
 ## Testing
 
@@ -240,21 +237,20 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 - Please note that when deploying manually you will have to deploy after each change you make to your repository.
 
 ## Credits
-List of used resources for your website (text, images, snippets of code, projects....)
-I Think Therefor I blog for the navbar/footer
-Bootstrap card/ classes
+List of used resources for your website (text, images, snippets of code, projects....)  
+I Think Therefor I blog for the navbar/footer  
+Bootstrap card/ classes  
 
 ### AI uses:
 I used copilot for a small amount of content just for a dog profile as well as helping with the booking view, getting the success or error messages to show up for the user and the clean part of the booking model to stop bookings on certain days.
 
 
-**Personal Notes**
+**Personal Notes** 
 
-I wanted to add so many other features to this but either ran out of time or they just weren't relevent to the MVP, I have many user stories for future content that I would have added had this project not been so time sensitive.
+I asked myself two questions.  
 
-I asked myself two questions.
-**Was the project successful?**
-If you'd have asked me to do this 2 months ago I'd have had absolutely no idea what to do and most likely couldn't have so yes it is successful.
+**Was the project successful?**  
+If you'd have asked me to do this 2 months ago I'd have had absolutely no idea what to do and most likely couldn't have so yes it is successful.  
 
-**Are you happy with your project?**
-There's so much more I'd have liked to add, change you name it. There are so many small improvements and things I'd like to add that eventually I just had to stop and know that it wasn't the best but it met the criteria. 
+**Are you happy with your project?**  
+There's so much more I'd have liked to add, change you name it. There are so many small improvements and things I'd like to add that eventually I just had to stop and know that it wasn't the best but it met the criteria.   
