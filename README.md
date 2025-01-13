@@ -139,6 +139,14 @@ The errors on the signup page are caused by the allauth form used.
 <img src="READMEfiles/html success page.png">
 </details>
 
+**CSS**
+<details><summary>Main styling</summary>
+<img src="READMEfiles/style style.png">
+</details>
+<details><summary>Booking styling</summary>
+<img src="READMEfiles/style booking.png">
+</details>
+
 
 **Python**
 <details><summary>booking admin.py</summary>
